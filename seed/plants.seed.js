@@ -114,6 +114,6 @@ const plants = [
 
 Plant.create(plants)
     .then(plantsFromDB => {
-        mongoose.connection.close();
+        // mongoose.connection.close();
     })
     .catch(err => console.log(`An error occurred while adding plants to the DB: ${err}`));
