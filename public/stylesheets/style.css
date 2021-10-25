@@ -180,6 +180,18 @@ nav div h2 {
   align-items: center;
 }
 
+.add-plant {
+  text-align: center;
+    background-color:#4A8370;
+    width: 100vw;
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: white;
+    margin: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+}
+
 /* >>>>>>>>>>> PLANTS-DETAILS VIEW <<<<<<<<<<<< */
 
 .details-image {
