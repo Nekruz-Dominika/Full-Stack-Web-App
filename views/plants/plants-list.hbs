@@ -1,13 +1,14 @@
-<h2>All plants:</h2>
-
+<h2 class="all-plants-title">All plants:</h2>
+<div class="plants-list-view">
 {{#each dataFromArr}}
-<div>
+<div class="one-plant">
     <div>
         <img src="{{image}}" alt="">
     </div>
-    <div>
+    <div class="intro">
         <h3>{{name}}</h3>
         <a href="/plants/{{_id}}">Read more</a>
     </div>
 </div>
 {{/each}}
+</div>

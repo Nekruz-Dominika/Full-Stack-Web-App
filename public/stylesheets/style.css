@@ -1,12 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #E6E4DD;
+  margin: 0;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 a {
   color: #00b7ff;
 }
 
-h1 {
-  color: 15px;
+
+nav {
+  color: white;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4A8370;
+}
+
+nav div {
+  display: flex;
+  flex-direction: row;
+}
+
+nav h1 {
+  font-family: Fredoka One;
+  font-size: 3rem;
+  margin: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-middle h2{
+  padding: 0 1rem
+}
+
+nav div h2 {
+  font-weight: 100;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: row;
+}
+
+.welcome {
+  color: white;
+  margin-top: 2rem;
+  background-image: url(/images/home-view.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 60vw;
+  height: 80vh;
+  position: relative;
+}
+
+.welcome-text {
+  text-align: center;
+  position: absolute;
+  top: 160px;
+  right: 50px;
+  font-size: 1rem;
+    line-height: 3rem;
+
+}
+
+.welcome-text ul {
+  text-align: start;
+  font-size: 1.7rem;
+}
+
+.account-invite {
+  width: 40vw;
+  padding:6rem 2rem;
+  color: #1F4E3E;
+}
+
+.account-invite h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+}
+
+.account-invite ul {
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 2.6rem;
+  margin-bottom: 4rem;
+
+}
+
+.account-invite ul li {
+  list-style:square;
+  list-style-position: inside;
+  text-align: center;
+}
+
+.account-invite a {
+  display: block;
+  margin: 0 auto;
+  width: 10vw;
+  text-align: center;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: white;
+  padding: 1rem;
+  background-color: #4A8370;
+}
+
+/* >>>>>>>>PLANTS-LIST VIEW <<<<<<<<<<< */
+
+.plants-list-view {
+  padding: 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.all-plants-title {
+  font-size: 3rem;
+  padding: 0 2rem;
+  color: #1F4E3E;
+  }
+
+
+.one-plant {
+  padding: 1rem;
+  width: 20vw;
+}
+
+.one-plant img {
+  width: 20vw;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.447);
+}
+
+.one-plant h3 {
+  text-align: center;
+  color: #1F4E3E;
+  font-size: 1.8rem;
+  margin: 0.5rem;
+}
+
+.one-plant a {
+  background-color:#4A8370;
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: white;
+  margin: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
