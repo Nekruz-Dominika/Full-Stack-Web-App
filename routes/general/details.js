@@ -1,6 +1,9 @@
 const router = require("express").Router();
 const Plant = require("../../models/Plant.model")
 
+
+//Details of a chosen plant
+
 router.get('/plants/:plantid', (req, res, next)=>{
     Plant
     .findById(req.params.plantid)
@@ -15,17 +18,21 @@ router.get('/plants/:plantid', (req, res, next)=>{
     });
 })
 
-router.get('/plants/:plantid/delete', (req, res, next)=>{
+
+// Delete the plant
+router.post('/plants/:plantid/delete', (req, res, next)=>{
     Plant
     .findByIdAndDelete(req.params.plantid)
     .then(()=>{
-        res.render('/')
+        res.redirect('/plants/')
     })
     .catch( (error) => {
         console.log("Error adding to DB", error);
         next(error);
     });
 })
+
+//Edit the plant
 
 router.get("/movies/:plantid/edit", (req, res, next)=>{
     Plant
