@@ -1,2 +1,13 @@
 <h2>All plants:</h2>
-<p>hello</p>
+
+{{#each dataFromArr}}
+<div>
+    <div>
+        <img src="{{image}}" alt="">
+    </div>
+    <div>
+        <h3>{{name}}</h3>
+        <a href="/plants/{{_id}}">Read more</a>
+    </div>
+</div>
+{{/each}}

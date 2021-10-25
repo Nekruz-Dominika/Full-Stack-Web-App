@@ -17,7 +17,7 @@ const plants = [
         sun: 'medium',
         water: 'low',
         price: '9.99 &euro;',
-        image: 'https://unsplash.com/photos/WQq3rRPb-5Q',
+        image: 'https://images.unsplash.com/photo-1620127807580-990c3ecebd14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80',
     },
     {
         name: 'Monstera',
@@ -25,7 +25,7 @@ const plants = [
         sun: 'medium',
         water: 'medium',
         price: '19.99 &euro;',
-        image: 'https://unsplash.com/photos/bwsTJMnhcwE',
+        image: 'https://images.unsplash.com/photo-1614594975525-e45190c55d0b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80',
     },
     {
         name: 'Zamioculcas',
@@ -33,7 +33,7 @@ const plants = [
         sun: 'low/medium',
         water: 'low/medium',
         price: '17.99 &euro;',
-        image: 'https://unsplash.com/photos/1gwjE0c3PSQ',
+        image: 'https://images.unsplash.com/photo-1632207691143-643e2a9a9361?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80',
     },
     {
         name: 'Ficus Elastica',
@@ -41,7 +41,7 @@ const plants = [
         sun: 'medium',
         water: 'medium/high',
         price: '18.99 &euro;',
-        image: 'https://unsplash.com/photos/OtO7x_yL9qM',
+        image: 'https://images.unsplash.com/photo-1596547609811-70a5082c84cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80',
     },
     {
         name: 'Chinese money plant',
@@ -49,7 +49,7 @@ const plants = [
         sun: 'medium/high',
         water: 'medium',
         price: '13.99 &euro;',
-        image: 'https://unsplash.com/photos/qoegZJ3ybOY',
+        image: 'https://images.unsplash.com/photo-1600411832986-5a4477b64a1c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80',
     },
     {
         name: 'Epipremnum aureum',
@@ -57,7 +57,7 @@ const plants = [
         sun: 'medium/high',
         water: 'medium',
         price: '12.99 &euro;',
-        image: 'https://unsplash.com/photos/thyDnx5asaw',
+        image: 'https://images.unsplash.com/photo-1602491674275-316d95560fb1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80',
     },
     {
         name: 'Dracaena reflexa',
@@ -65,7 +65,7 @@ const plants = [
         sun: 'medium',
         water: 'low/medium',
         price: '7.99 &euro;',
-        image: 'https://unsplash.com/photos/I5hh4tiU54k',
+        image: 'https://images.unsplash.com/photo-1607961874373-460fab9111fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80',
     },
     {
         name: 'Aloe Vera',
@@ -73,7 +73,7 @@ const plants = [
         sun: 'medium',
         water: 'low',
         price: '7.99 &euro;',
-        image: 'https://unsplash.com/photos/dgvFsLfIX9E',
+        image: 'https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80',
     },
     {
         name: 'Pachira aquatica',
@@ -81,7 +81,7 @@ const plants = [
         sun: 'medium/high',
         water: 'low/medium',
         price: '12.99 &euro;',
-        image: 'https://unsplash.com/photos/xJh27OYI7zg',
+        image: 'https://images.unsplash.com/photo-1633789242668-886f4098ea1c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80',
     },
     {
         name: 'Calathea makoyana',
@@ -89,7 +89,7 @@ const plants = [
         sun: 'low/medium',
         water: 'medium',
         price: '16.99 &euro;',
-        image: 'https://unsplash.com/photos/66C2MYbqVfw',
+        image: 'https://images.unsplash.com/photo-1630477726911-47765c6c9d97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80',
     },
     {
         name: 'Agalonema Kiwi',
@@ -97,7 +97,7 @@ const plants = [
         sun: 'medium/high',
         water: 'medium/high',
         price: '13.99 &euro;',
-        image: 'https://unsplash.com/photos/6bSMxIj1ES8',
+        image: 'https://images.unsplash.com/photo-1625666341991-94e3a437bb2d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80',
     },
     {
         name: 'String of hearts plant',
@@ -105,7 +105,7 @@ const plants = [
         sun: 'medium/high',
         water: 'low',
         price: '9.99 &euro;',
-        image: 'https://unsplash.com/photos/rmYAJLWdH3Q',
+        image: 'https://images.unsplash.com/photo-1622479303268-c7be347dfaf3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80',
     },
 ]
 
