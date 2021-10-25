@@ -6,12 +6,10 @@ router.get("/plants", (req, res, next)=>{
     Plant
     .find()
     .then((dataFromDB) => {
-        // console.log(dataFromDB);
         const data = {
             dataFromArr: dataFromDB
         }
         res.render("plants/plants-list", data)
-        // res.send("Works")
     })
     .catch( (error) => {
         console.log("Error getting list of plants from DB", error);
