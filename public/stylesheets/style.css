@@ -227,3 +227,27 @@ nav div h2 {
   font-size: 1.2rem;
   font-weight: 700;
 }
+
+
+.admin-buttons {
+  display: flex;
+  flex-direction: row;
+  margin:0 2rem;
+}
+
+.delete-and-edit-btn,
+.add-btn {
+  border: 2px solid #4A8370;
+  color: white;
+  background-color: #4A8370;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  margin: 0 2rem;
+  text-decoration: none;
+}
+
+.delete-and-edit-btn:hover,
+.add-btn:hover {
+  color: #4A8370;
+  background-color: white;
+}

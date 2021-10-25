@@ -11,16 +11,16 @@
         <h4>Water: {{this.water}}</h4>
         <h4>Price: {{this.price}}</h4>
         <div>
-            <a href="">Add to basket</a>
-            <a href="">Add to favourites list</a>
+            <a class="add-btn" href="">Add to basket</a>
+            <a class="add-btn" href="">Add to favourites list</a>
         </div>
     </div>
 </div>
-<div>
+<div class="admin-buttons">
     <form action="/plants/{{this._id}}/delete" method="POST">
-        <button>Delete</button>
+        <button class="delete-and-edit-btn">Delete</button>
     </form>
     <form action="/plants/{{this._id}}/edit" method="POST">
-        <button>Edit</button>
+        <button class="delete-and-edit-btn">Edit</button>
     </form>
 </div>
