@@ -1,8 +1,8 @@
-<h2>Details:</h2>
+<h2 class="all-plants-title">Details:</h2>
 
-<div>
+<div class="details-container">
     <div>
-        <img src="" alt="">
+        <img class="details-image" src="{{this.image}}" alt="">
     </div>
     <div>
         <h3>{{this.name}}</h3>
@@ -17,6 +17,10 @@
     </div>
 </div>
 <div>
-    <a href="">Delete</a>
-    <a href="">Update</a>
+    <form action="/plants/{{this._id}}/delete" method="POST">
+        <button>Delete</button>
+    </form>
+    <form action="/plants/{{this._id}}/edit" method="POST">
+        <button>Edit</button>
+    </form>
 </div>

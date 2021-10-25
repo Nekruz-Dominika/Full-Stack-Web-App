@@ -37,6 +37,10 @@ nav a {
   text-decoration: none;
 }
 
+nav a h2:hover {
+  font-weight: 600;
+}
+
 .nav-middle h2{
   padding: 0 1rem
 }
@@ -44,6 +48,13 @@ nav a {
 nav div h2 {
   font-weight: 100;
 }
+
+#basket-img {
+  padding: 1rem;
+  width: 2rem;
+  height: 2rem;
+}
+
 
 .homepage {
   display: flex;
@@ -70,6 +81,10 @@ nav div h2 {
   font-size: 1rem;
     line-height: 3rem;
 
+}
+
+.welcome-text h1 {
+  font-size: 2.7rem;
 }
 
 .welcome-text ul {
@@ -163,4 +178,40 @@ nav div h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* >>>>>>>>>>> PLANTS-DETAILS VIEW <<<<<<<<<<<< */
+
+.details-image {
+  width: 30vw;
+}
+
+.details-container {
+  margin: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.details-container div {
+  padding: 1rem;
+}
+
+.details-container h3 {
+  font-size: 2rem;
+  margin: 1rem 0;
+  color: #1F4E3E;
+  font-weight: 900;
+}
+
+.details-container p {
+  font-weight: 200;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+.details-container h4 {
+  color: #1F4E3E;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
