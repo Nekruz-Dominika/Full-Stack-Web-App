@@ -33,6 +33,9 @@ app.use("/auth", authRoutes);
 const generalRoutes = require("./routes/general/plants");
 app.use("/", generalRoutes);
 
+const detailsRoutes = require("./routes/general/details");
+app.use("/", detailsRoutes);
+
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
