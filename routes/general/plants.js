@@ -10,7 +10,7 @@ router.get("/plants", (req, res, next)=>{
         const data = {
             dataFromArr: dataFromDB
         }
-        res.render("", dataFromDB)
+        res.render("plants/plants-list", data)
         // res.send("Works")
     })
     .catch( (error) => {
