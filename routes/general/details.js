@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const Plant = require("../../models/Plant.model")
+const isAdmin = require("../../middleware/isAdmin.middleware")
 
 
 //Details of a chosen plant
@@ -20,7 +21,7 @@ router.get('/plants/:plantid', (req, res, next)=>{
 
 
 // Delete the plant
-router.post('/plants/:plantid/delete', (req, res, next)=>{
+router.post('/plants/:plantid/delete', isAdmin, (req, res, next)=>{
     Plant
     .findByIdAndDelete(req.params.plantid)
     .then(()=>{
@@ -34,7 +35,7 @@ router.post('/plants/:plantid/delete', (req, res, next)=>{
 
 //Edit the plant
 
-router.get('/plants/:plantid/edit', (req, res, next) => {
+router.get('/plants/:plantid/edit', isAdmin, (req, res, next) => {
     Plant
         .findById(req.params.plantid)
         .then((plantFromDB) => {
