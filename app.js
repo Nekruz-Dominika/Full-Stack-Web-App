@@ -39,6 +39,9 @@ app.use("/", detailsRoutes);
 const searchRoutes = require("./routes/general/search");
 app.use("/", searchRoutes);
 
+const accountRoutes = require('./routes/general/account');
+app.use('/', accountRoutes)
+
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
