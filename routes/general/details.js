@@ -51,7 +51,7 @@ router.post('/plants/:plantid/edit', (req, res, next) => {
     const {name, description, sun, water, price, image} = req.body;
     Plant.findByIdAndUpdate(req.params.plantid, {name, description, sun, water, price, image}, { new: true })
         .then((editedPlant) => {
-            res.redirect('/plants/' + editedPlant._id)
+            res.redirect('/plants/' + editedPlant._id + '/edit')
         })
         .catch((error) => {
             console.log('Error updating book details', error);
