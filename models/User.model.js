@@ -7,14 +7,7 @@ const userSchema = new Schema(
       unique: true,
       required: [true, 'Username is required.'],
     },
-    email: {
-      type: String,
-      required: [true, 'Email is required.'],
-      unique: true,
-      lowercase: true,
-      trim: true
-    },
-    passwordHash: {
+    password: {
       type: String,
       required: [true, 'Password is required.']
     },
