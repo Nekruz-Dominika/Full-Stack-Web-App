@@ -12,7 +12,11 @@
         <h4>Price: {{this.price}}</h4>
         <div>
             <a class="add-btn" href="">Add to basket</a>
-            <a class="add-btn" href="">Add to favourites list</a>
+            <br>
+            <br>
+            <form action="/plants/{{this._id}}" method="POST">
+                <button class="delete-and-edit-btn">Add to favourites list</button>
+            </form>
         </div>
     </div>
 </div>

@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const Plant = require("../../models/Plant.model")
+const User = require("../../models/User.model");
 const isAdmin = require("../../middleware/isAdmin.middleware")
 
 
@@ -17,6 +18,13 @@ router.get('/plants/:plantid', (req, res, next)=>{
         console.log("Error adding to DB", error);
         next(error);
     });
+})
+
+// Add the plant to favorites list
+
+router.post('/plants/:plantid', (req, res, next) => {
+    User.findByIdAndUpdate(req.session.user._id, { $push: {plantsList: req.params.plantid}}, { 'new': true })
+        .then(() => res.redirect('/account'))
 })
 
 

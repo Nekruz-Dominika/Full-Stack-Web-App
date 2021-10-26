@@ -141,8 +141,9 @@ nav div h2 {
 }
 
 .all-plants-title {
+  font-weight: 800;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
   padding: 0 2rem;
   color: #1F4E3E;
   text-shadow: 3px 3px 3px white;
@@ -289,6 +290,35 @@ nav div h2 {
   margin-bottom: 2rem;
 }
 
+
+/* >>>>>>>>>> SEARCH <<<<<<<<<<< */
+
+.search-form {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+.search-form input {
+  width: 40vw;
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+
+.search-form button {
+    border: 2px solid #4A8370;
+    color: white;
+    background-color: #4A8370;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    margin: 0 2rem;
+    text-decoration: none;
+}
+
+.search-form button:hover {
+    color: #4A8370;
+    background-color: white;
+}
 
 /* >>>>>>>>>> ACCOUNT <<<<<<<<<<< */
 
