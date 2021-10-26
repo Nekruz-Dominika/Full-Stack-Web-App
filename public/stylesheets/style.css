@@ -141,9 +141,11 @@ nav div h2 {
 }
 
 .all-plants-title {
+  text-align: center;
   font-size: 3rem;
   padding: 0 2rem;
   color: #1F4E3E;
+  text-shadow: 3px 3px 3px white;
   }
 
 
@@ -250,4 +252,39 @@ nav div h2 {
 .add-btn:hover {
   color: #4A8370;
   background-color: white;
+}
+
+/* >>>>>>>>> FORMS <<<<<<<<<<<< */
+
+.form-container {
+  display: flex;
+  align-items: center;  
+}
+
+.plant-img {
+  width: 35vw;
+}
+
+.form label {
+  margin: 1rem ;
+  font-weight: 700;
+  color: #1F4E3E;
+  font-size: 1.5rem;
+  display: block;
+  width: 45vw;
+  line-height: 3rem;
+}
+
+.form label input {
+  display: block;
+  width: 55vw;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+
+.center-btn {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 2rem;
 }

@@ -1,22 +1,29 @@
-<h2>Add new plant:</h2>
-<form action="/plants/plants-create" method="POST">
-    <label>Name:
-        <input type="text" name="name">
-    </label>
-    <label>Description:
-        <input type="text" name="description">
-    </label>
-    <label>Sun:
-        <input type="text" name="sun">
-    </label>
-    <label>Water:
-        <input type="text" name="water">
-    </label>
-    <label>Price:
-        <input type="text" name="price">
-    </label>
-    <label>Image:
-        <input type="text" name="image">
-    </label>
-    <button type="submit">Add new plant</button>
-</form>
+<h2 class="all-plants-title">Add new plant:</h2>
+<div class="form-container">
+    <div>
+        <img class="plant-img"  src="/images/plant1.png" alt="">
+    </div>
+    <div>
+        <form class="form" action="/plants/plants-create" method="POST">
+            <label class="form">Name:
+                <input type="text" name="name">
+            </label>
+            <label>Description:
+                <input type="text" name="description">
+            </label>
+            <label>Sun:
+                <input type="text" name="sun">
+            </label>
+            <label>Water:
+                <input type="text" name="water">
+            </label>
+            <label>Price:
+                <input type="text" name="price">
+            </label>
+            <label>Image:
+                <input type="text" name="image">
+            </label>
+            <button class="add-btn center-btn" type="submit">Add new plant</button>
+        </form>
+    </div>
+</div>

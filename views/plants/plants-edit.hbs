@@ -1,23 +1,30 @@
-<h1>Edit details:</h1>
+<h2 class="all-plants-title">Edit details:</h2>
+<div class="form-container">
+    <div>
+        <img class="plant-img" src="/images/plant2.png" alt="">
+    </div>
+    <div>
+        <form class="form" action="/plants/{{this._id}}/edit" method="POST">
+            <label>Name:
+                <input type="text" name="name" value="{{this.name}}">
+            </label>
+            <label>Description:
+                <input type="text" name="description" value="{{this.description}}">
+            </label>
+            <label>Sun:
+                <input type="text" name="sun" value="{{this.sun}}">
+            </label>
+            <label>Water:
+                <input type="text" name="water" value="{{this.water}}">
+            </label>
+            <label>Price:
+                <input type="text" name="price" value="{{this.price}}">
+            </label>
+            <label>Image:
+                <input type="text" name="image" value="{{this.image}}">
+            </label>
+            <button class="add-btn center-btn" type="submit">Edit plant</button>
+        </form>
+    </div>
+</div>
 
-<form action="/plants/{{this._id}}/edit" method="POST">
-    <label>Name:
-        <input type="text" name="name" value="{{this.name}}">
-    </label>
-    <label>Description:
-        <input type="text" name="description" value="{{this.description}}">
-    </label>
-    <label>Sun:
-        <input type="text" name="sun" value="{{this.sun}}">
-    </label>
-    <label>Water:
-        <input type="text" name="water" value="{{this.water}}">
-    </label>
-    <label>Price:
-        <input type="text" name="price" value="{{this.price}}">
-    </label>
-    <label>Image:
-        <input type="text" name="image" value="{{this.image}}">
-    </label>
-    <button type="submit">Edit plant</button>
-</form>
