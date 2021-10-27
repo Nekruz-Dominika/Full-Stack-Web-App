@@ -1,11 +1,15 @@
 {{#if this}}
-<h2>Welcome, {{ this.username }}!</h2>
-<p>You currently have a role: {{this.role}}</p>
-<ul>Your favorites plants:
+<div class="account-container">
+    <h2 class="account-welcome">Welcome, {{ this.username }}!</h2>
+    <a class="logout-btn" href="/auth/logout">LOG OUT</a>
+</div>
+
+<ul class="fav-plants-list">
+    <h2>Your favorites plants:</h2>
     {{#each this.plantsList}}
     <div class="details-container">
         <div>
-            <img class="details-image" src="{{this.image}}" alt="">
+            <img class="account-image" src="{{this.image}}" alt="">
         </div>
         <div>
             <h3>{{this.name}}</h3>
@@ -13,22 +17,9 @@
             <h4>Sun: {{this.sun}}</h4>
             <h4>Water: {{this.water}}</h4>
             <h4>Price: {{this.price}}</h4>
-            <div>
-                <form action="/plants/{{this._id}}" method="POST">
-                    <button class="delete-and-edit-btn">Add to favourites list</button>
-                </form>
-            </div>
         </div>
-    </div>
-    <div class="admin-buttons">
-        <form action="/plants/{{this._id}}/delete" method="POST">
-            <button class="delete-and-edit-btn">Delete</button>
-        </form>
-        <form action="/plants/{{this._id}}/edit" method="POST">
-            <button class="delete-and-edit-btn">Edit</button>
-        </form>
     </div>
     {{/each}}
 </ul>
-<a class="logout-btn" href="/auth/logout">LOG OUT</a>
+
 {{/if}}

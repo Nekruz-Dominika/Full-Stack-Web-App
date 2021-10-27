@@ -369,9 +369,50 @@ text-decoration: none;
 
 /* >>>>>>>>>> ACCOUNT <<<<<<<<<<< */
 
+.fav-plants-list h2{
+  font-size: 1rem;
+    font-weight: 600;
+    font-size: 2.5rem;
+    padding: 0 2rem;
+    color: #1F4E3E;
+    text-align: center;
+    text-shadow: 2px 2px 2px #4A8370;
 
+  }
 
+.account-image {
+  width: 20vw;
+}
 
+.account-container {
+  background-color: #4A8370;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+}
+
+.account-container h2 {
+  font-size: 2rem;
+  color: white;
+  font-weight: 200;
+}
+
+.account-container a {
+      border: 2px solid #4A8370;
+      color: white;
+      background-color: #4A8370;
+      font-size: 1.5rem;
+      font-weight: 200;
+      text-decoration: none;
+}
+
+.account-container a:hover {
+  transition: 0.2s;
+      color: white;
+      text-shadow: 3px 3px 3px #1F4E3E;
+}
 
 /* >>>>>>>>>>>>>  ERROR MESSAGE <<<<<<<<<<<<< */
 
