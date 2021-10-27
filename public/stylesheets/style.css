@@ -131,6 +131,12 @@ nav div h2 {
   background-color: #4A8370;
 }
 
+.account-invite a:hover {
+  transition: 0.2s;
+  background-color: white;
+  color: #4A8370;
+}
+
 /* >>>>>>>>PLANTS-LIST VIEW <<<<<<<<<<< */
 
 .plants-list-view {
@@ -175,6 +181,12 @@ nav div h2 {
   margin: 0.5rem;
   padding: 0.5rem 1.5rem;
   text-decoration: none;
+}
+
+.one-plant a:hover {
+    transition: 0.2s;
+    background-color: white;
+    color: #4A8370;
 }
 
 .intro {
@@ -272,6 +284,11 @@ font-weight: 200;
 padding: 1rem 3rem;
 margin: 0 2rem;
 text-decoration: none;
+}
+
+.add-fav-btn:hover {
+  transition: 0.2s;
+  border: 4px solid #1F4E3E;
 }
 
 .add-fav-btn img {
