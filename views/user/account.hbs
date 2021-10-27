@@ -1,6 +1,18 @@
-<div>
-    <h2>Hello, user!</h2>
-    <a class="logout-btn" href="/auth/logout">LOG OUT</a>
-</div>
+{{!-- <div>
+    {{#if this}}
+        <h2>Hello, {{ this.username }}!</h2>
+        <a class="logout-btn" href="/auth/logout">LOG OUT</a>
+    {{/if}}
 
-<h3>List of your favorite plants:</h3>
+    <h3>List of your favorite plants:</h3>
+</div> --}}
+
+
+{{#if this}}
+    <h2>Welcome, {{ this.username }}!</h2>
+    <p>You currently have this role: {{this.role}}</p>
+    <p>This is your profile page my friend!</p>
+    <a class="logout-btn" href="/auth/logout">LOG OUT</a>
+{{else}}
+    <p>Still no logged in user, sorry!</p>
+{{/if}} 

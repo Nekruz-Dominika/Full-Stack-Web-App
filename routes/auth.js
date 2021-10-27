@@ -154,4 +154,8 @@ router.get("/logout", isLoggedIn, (req, res) => {
   });
 });
 
+// router.get('/account', (req, res) => {
+//   res.render('user/account', { userInSession: req.session.currentUser })
+// });
+
 module.exports = router;
