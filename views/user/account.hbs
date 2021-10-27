@@ -10,8 +10,12 @@
 
 {{#if this}}
     <h2>Welcome, {{ this.username }}!</h2>
-    <p>You currently have this role: {{this.role}}</p>
-    <p>This is your profile page my friend!</p>
+    <p>You currently have a role: {{this.role}}</p>
+    <ul>Your favorites plants:
+        {{#each this.plantsList}}
+        <li>hello</li>
+        {{/each}}
+    </ul>
     <a class="logout-btn" href="/auth/logout">LOG OUT</a>
 {{else}}
     <p>Still no logged in user, sorry!</p>
