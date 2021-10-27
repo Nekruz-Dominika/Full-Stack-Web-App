@@ -10,9 +10,11 @@
         <h4>Sun: {{this.sun}}</h4>
         <h4>Water: {{this.water}}</h4>
         <h4>Price: {{this.price}}</h4>
-        <div>
+        <div class="fav-btn">
             <form action="/plants/{{this._id}}" method="POST">
-                <button class="delete-and-edit-btn">Add to favourites list</button>
+                <button class="add-fav-btn">
+                    <img src="/images/heart.png" alt="">
+                    <p>Add to favourites list</p></button>
             </form>
         </div>
     </div>

@@ -244,6 +244,7 @@ nav div h2 {
   color: white;
   background-color: #4A8370;
   font-size: 1.5rem;
+  font-weight: 200;
   padding: 0.5rem 1rem;
   margin: 0 2rem;
   text-decoration: none;
@@ -254,6 +255,35 @@ nav div h2 {
   color: #4A8370;
   background-color: white;
 }
+
+.fav-btn form button{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;
+}
+
+.add-fav-btn {
+border: 2px solid #4A8370;
+color: white;
+background-color: #4A8370;
+font-size: 1.5rem;
+font-weight: 200;
+padding: 1rem 3rem;
+margin: 0 2rem;
+text-decoration: none;
+}
+
+.add-fav-btn img {
+  width: 2rem;
+  padding: 0 1rem;
+}
+
+.add-fav-btn p {
+  margin: 0;
+}
+
+
 
 /* >>>>>>>>> FORMS <<<<<<<<<<<< */
 
@@ -322,3 +352,19 @@ nav div h2 {
 
 /* >>>>>>>>>> ACCOUNT <<<<<<<<<<< */
 
+
+
+
+
+/* >>>>>>>>>>>>>  ERROR MESSAGE <<<<<<<<<<<<< */
+
+.error-msg {
+  background-color: tomato;
+  font-weight: 500;
+  color: white;
+  font-size: 1.3rem;
+  padding:0.5rem;
+  margin: 1rem;
+    width: 55vw;
+
+}

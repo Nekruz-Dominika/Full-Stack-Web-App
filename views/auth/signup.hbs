@@ -1,4 +1,4 @@
-<h2 class="all-plants-title"Please sign up here:</h2>
+<h2 class="all-plants-title">Please sign up here:</h2>
 <div class="form-container">
    <div>
       <img class="plant-img" src="/images/plant4.png" alt="">
@@ -11,11 +11,12 @@
          <label> Password
             <input type="password" name="password">
          </label>
+                  {{#if errorMessage}}
+                  <p class="error-msg">{{errorMessage}}</p>
+                  {{/if}}
       
          <button class="add-btn center-btn" type="submit">Submit</button>
-         {{#if errorMessage}}
-         <p>{{errorMessage}}</p>
-         {{/if}}
+
       </form>
    </div>
 </div>
