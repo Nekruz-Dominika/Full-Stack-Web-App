@@ -7,7 +7,9 @@ const plantSchema = new Schema(
         sun: String,
         water: String,
         price: String,
-        image: String
+        image: String,
+        owner: {type: Schema.Types.ObjectId, ref: "User"}
+
     },
     {
         timestamps: true,
