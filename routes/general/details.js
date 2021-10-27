@@ -3,6 +3,7 @@ const Plant = require("../../models/Plant.model")
 const User = require("../../models/User.model");
 const isAdmin = require("../../middleware/isAdmin.middleware")
 const isAdminOrOwner = require("../../middleware/isAdminOrOwner")
+const isLoggedIn = require("../../middleware/isLoggedIn")
 
 
 //Details of a chosen plant
@@ -23,7 +24,7 @@ router.get('/plants/:plantid', (req, res, next)=>{
 
 // Add the plant to favorites list
 
-router.post('/plants/:plantid', (req, res, next) => {
+router.post('/plants/:plantid', isLoggedIn, (req, res, next) => {
     User.findByIdAndUpdate(req.session.user._id, { $push: {plantsList: req.params.plantid}}, { 'new': true })
         .then(() => res.redirect('/account'))
 })
