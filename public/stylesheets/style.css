@@ -264,6 +264,7 @@ nav div h2 {
 
 .delete-and-edit-btn:hover,
 .add-btn:hover {
+  transition: 0.2s;
   color: #4A8370;
   background-color: white;
 }
