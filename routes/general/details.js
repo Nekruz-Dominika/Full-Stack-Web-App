@@ -2,6 +2,7 @@ const router = require("express").Router();
 const Plant = require("../../models/Plant.model")
 const User = require("../../models/User.model");
 const isAdmin = require("../../middleware/isAdmin.middleware")
+const isAdminOrOwner = require("../../middleware/isAdminOrOwner")
 
 
 //Details of a chosen plant
@@ -29,7 +30,7 @@ router.post('/plants/:plantid', (req, res, next) => {
 
 
 // Delete the plant
-router.post('/plants/:plantid/delete', isAdmin, (req, res, next)=>{
+router.post('/plants/:plantid/delete', isAdminOrOwner, (req, res, next)=>{
     Plant
     .findByIdAndDelete(req.params.plantid)
     .then(()=>{
@@ -43,7 +44,7 @@ router.post('/plants/:plantid/delete', isAdmin, (req, res, next)=>{
 
 //Edit the plant
 
-router.get('/plants/:plantid/edit', isAdmin, (req, res, next) => {
+router.get('/plants/:plantid/edit', isAdminOrOwner, (req, res, next) => {
     Plant
         .findById(req.params.plantid)
         .then((plantFromDB) => {
@@ -53,7 +54,6 @@ router.get('/plants/:plantid/edit', isAdmin, (req, res, next) => {
             console.log('Error loading edit form', error);
             next(error);
         })
-    
 })
 
 router.post('/plants/:plantid/edit', (req, res, next) => {

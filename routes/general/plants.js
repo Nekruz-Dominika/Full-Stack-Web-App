@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const Plant = require("../../models/Plant.model")
+const isLoggedIn = require('../../middleware/isLoggedIn')
 
 
 router.get("/plants", (req, res, next)=>{
@@ -18,17 +19,17 @@ router.get("/plants", (req, res, next)=>{
 })
 
 
-
-
-router.get('/plants/plants-create', (req, res, next) => {
+router.get('/plants/plants-create', isLoggedIn ,(req, res, next) => {
     res.render('plants/plants-create')
 })
 
 router.post('/plants/plants-create', (req, res, next) => {
     const {name, description, sun, water, price, image} = req.body;
     
+    const owner = req.session.user._id;
+
     Plant
-    .create({name, description, sun, water, price, image})
+    .create({name, description, sun, water, price, image, owner})
     .then(() => {
         res.redirect('/plants')
     })
