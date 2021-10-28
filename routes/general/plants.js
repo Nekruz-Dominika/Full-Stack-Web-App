@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const Plant = require("../../models/Plant.model")
 const isLoggedIn = require('../../middleware/isLoggedIn')
+const fileUploader = require('../../config/cloudinary.config');
 
 
 router.get("/plants", (req, res, next)=>{
@@ -23,15 +24,17 @@ router.get('/plants/plants-create', isLoggedIn ,(req, res, next) => {
     res.render('plants/plants-create')
 })
 
-router.post('/plants/plants-create', (req, res, next) => {
+router.post('/plants/plants-create', fileUploader.single('image'), (req, res, next) => {
     const {name, description, sun, water, price, image} = req.body;
     
     const owner = req.session.user._id;
 
     Plant
-    .create({name, description, sun, water, price, image, owner})
+    .create({name, description, sun, water, price, image, owner, image: req.file.path})
     .then(() => {
         res.redirect('/plants')
+        console.log(req.file);
+
     })
     .catch( (error) => {
         console.log("Error getting list of plants from DB", error);

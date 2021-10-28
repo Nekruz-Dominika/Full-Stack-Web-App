@@ -4,7 +4,7 @@
         <img class="plant-img"  src="/images/plant1.png" alt="">
     </div>
     <div>
-        <form class="form" action="/plants/plants-create" method="POST">
+        <form class="form" action="/plants/plants-create" method="POST" enctype="multipart/form-data">
             <label class="form">Name:
                 <input type="text" name="name" required>
             </label>
@@ -21,7 +21,7 @@
                 <input type="text" name="price" required>
             </label>
             <label>Image:
-                <input type="text" name="image" required>
+                <input type="file" name="image" required>
             </label>
             <button class="add-btn center-btn" type="submit">Add new plant</button>
         </form>
