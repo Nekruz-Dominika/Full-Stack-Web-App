@@ -1,11 +1,14 @@
 {{#if this}}
 <div class="account-container">
-    <h2 class="account-welcome">Welcome, {{ this.username }}!</h2>
+    <h2 class="account-welcome">Welcome {{ this.username }}!</h2>
     <a class="logout-btn" href="/auth/logout">LOG OUT</a>
 </div>
 
 <ul class="fav-plants-list">
     <h2>Your favorites plants:</h2>
+        {{#if message}}
+        <p class="error-msg-center">{{message}}</p>
+        {{/if}}
     {{#each this.plantsList}}
     <div class="details-container">
         <div>
