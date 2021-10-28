@@ -4,7 +4,7 @@
         <img class="plant-img" src="/images/plant2.png" alt="">
     </div>
     <div>
-        <form class="form" action="/plants/{{this._id}}/edit" method="POST">
+        <form class="form" action="/plants/{{this._id}}/edit" method="POST" enctype="multipart/form-data">
             <label>Name:
                 <input type="text" name="name" value="{{this.name}}">
             </label>
@@ -21,7 +21,8 @@
                 <input type="text" name="price" value="{{this.price}}">
             </label>
             <label>Image:
-                <input type="text" name="image" value="{{this.image}}">
+                <input type="file" name="image">
+                <input type="text" name="existingImage" hidden value="{{this.image}}">
             </label>
             <button class="add-btn center-btn" type="submit">Edit plant</button>
         </form>

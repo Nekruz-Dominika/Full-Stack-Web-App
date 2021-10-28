@@ -4,7 +4,7 @@ const User = require("../../models/User.model");
 const isAdmin = require("../../middleware/isAdmin.middleware")
 const isAdminOrOwner = require("../../middleware/isAdminOrOwner")
 const isLoggedIn = require("../../middleware/isLoggedIn")
-
+const fileUploader = require('../../config/cloudinary.config');
 
 //Details of a chosen plant
 
@@ -57,8 +57,16 @@ router.get('/plants/:plantid/edit', isAdminOrOwner, (req, res, next) => {
         })
 })
 
-router.post('/plants/:plantid/edit', (req, res, next) => {
-    const {name, description, sun, water, price, image} = req.body;
+router.post('/plants/:plantid/edit', fileUploader.single('image'), (req, res, next) => {
+    const {name, description, sun, water, price, existingImage} = req.body;
+    
+    let image;
+    if (req.file) {
+        image = req.file.path;
+    } else {
+        image = existingImage;
+    }
+    
     Plant.findByIdAndUpdate(req.params.plantid, {name, description, sun, water, price, image}, { new: true })
         .then((editedPlant) => {
             res.redirect('/plants/' + editedPlant._id + '/edit')
