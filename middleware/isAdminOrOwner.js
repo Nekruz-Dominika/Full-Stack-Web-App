@@ -18,7 +18,7 @@ function isAdminOrOwner (req, res, next) {
 
         })
         .catch(() => {
-            res.redirect('/auth/login')
+            res.render('auth/login', { errorMessage: "In order to delete or edit plants, you must be logged in as an admin or the creator of the plant." })
         })
 
 
