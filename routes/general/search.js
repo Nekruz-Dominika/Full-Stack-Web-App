@@ -16,6 +16,9 @@ router.get('/search-result', (req, res, next)=>{
     Plant
     .findOne(req.query)
     .then((datafromDB)=>{
+        if (!datafromDB) {
+            return res.render('plants/plants-search', { errorMessage: "Sorry, we couldn't find the plant." })
+        }
         res.render('plants/plants-search-result', datafromDB)
     })
     .catch( (error) => {

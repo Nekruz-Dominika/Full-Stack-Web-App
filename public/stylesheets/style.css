@@ -351,6 +351,7 @@ text-decoration: none;
   width: 40vw;
   font-size: 1.2rem;
   padding: 1rem;
+  margin-bottom: 2rem;
 }
 
 .search-form button {
@@ -424,6 +425,18 @@ text-decoration: none;
   font-size: 1.3rem;
   padding:0.5rem;
   margin: 1rem;
-    width: 55vw;
+  width: 55vw;
 
+}
+
+.error-msg-center {
+  text-align: center;
+  display: block;
+  background-color: tomato;
+  font-weight: 500;
+  color: white;
+  font-size: 1.3rem;
+  padding:0.5rem;
+  margin: 0 auto;
+  width: 45vw;
 }
