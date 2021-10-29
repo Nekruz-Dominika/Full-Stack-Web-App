@@ -1,9 +1,14 @@
 const router = require("express").Router();
+// <<<<<<< HEAD
 const request = require("request")
+// =======
+const express = require("express");
+// >>>>>>> 0a6e1e56e1c392283c32147b6321c4e31956ad72
 
 
 /* GET home page */
 router.get("/", (req, res, next) => {
+  console.log(req.app.locals);
   res.render("index");
 });
 
@@ -32,3 +37,4 @@ router.get('/weather', (req, res, next)=>{
 })
 
 module.exports = router;
+

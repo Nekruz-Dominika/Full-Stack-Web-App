@@ -14,11 +14,20 @@
       <nav>
          <div><a href="/"><h1>plantin'</h1></a></div>
          <div class="nav-middle">
+
             <a href="/plants"><h2>all plants </h2></a>
             <h2> | </h2>
             <a href="/search"><h2> search </h2></a>
             <h2> | </h2>
             <a href="/account"><h2> account</h2></a>
+            <h2> | </h2>
+            {{#if isCurrentUserLoggedIn}}
+            <a class="log" href="/auth/logout"><h2>log out</h2></a>
+            {{else}}
+            <a class="log" href="/auth/login"><h2>log in</h2></a>
+            <h2> | </h2>
+            <a class="log" href="/auth/signup"><h2>sign up</h2></a>
+            {{/if}}
          </div>
       </nav>
 

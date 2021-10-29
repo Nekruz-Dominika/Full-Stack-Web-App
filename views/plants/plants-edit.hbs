@@ -22,10 +22,12 @@
             </label>
             <label>Image:
                 <input type="file" name="image">
-                <input type="text" name="existingImage" hidden value="{{this.image}}">
             </label>
             <button class="add-btn center-btn" type="submit">Edit plant</button>
         </form>
+        {{#if message}}
+        <p>{{message}}</p>
+        {{/if}}
     </div>
 </div>
 

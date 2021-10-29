@@ -57,7 +57,7 @@ router.get('/plants/:plantid/edit', isAdminOrOwner, (req, res, next) => {
         })
 })
 
-router.post('/plants/:plantid/edit', fileUploader.single('image'), (req, res, next) => {
+router.post('/plants/:plantid/edit',isAdminOrOwner, fileUploader.single('image'), (req, res, next) => {
     const {name, description, sun, water, price, existingImage} = req.body;
     
     let image;

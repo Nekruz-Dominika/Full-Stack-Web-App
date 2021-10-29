@@ -8,7 +8,13 @@ router.get('/account', isLoggedIn, (req, res) => {
     .findById(req.session.user._id)
     .populate('plantsList')
     .then((userFromDB)=>{
-        res.render('user/account', userFromDB );
+        if (!userFromDB.plantsList[0]) {
+            return res.render('user/account', {message: 'Please add some plants to your favorites list, they will appear here.'} );
+        }
+        else {
+            res.render('user/account', userFromDB );
+        }
+        
         console.log(userFromDB.plantsList)
     })
 

@@ -259,6 +259,7 @@ nav div h2 {
   font-weight: 200;
   padding: 0.5rem 1rem;
   margin: 0 2rem;
+  margin-bottom: 3rem;
   text-decoration: none;
 }
 
@@ -311,7 +312,7 @@ text-decoration: none;
 }
 
 .plant-img {
-  width: 35vw;
+  width: 25vw;
 }
 
 .form label {
@@ -367,6 +368,11 @@ text-decoration: none;
 .search-form button:hover {
     color: #4A8370;
     background-color: white;
+}
+
+.plants-search {
+  margin: 0 auto;
+  display: block;
 }
 
 /* >>>>>>>>>> ACCOUNT <<<<<<<<<<< */

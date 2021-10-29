@@ -6,7 +6,7 @@
             <ul>
                 <li>find the best plant for your needs</li>
                 <li>learn how to take care of your plants</li>
-                <li>buy new green friends</li>
+                <li>share your knowledge with others</li>
             </ul>
         </div>
     </div>
@@ -14,14 +14,10 @@
         <h2>Stay with us and create an account!</h2>
         <ul>With an account you can:
             <li>create a list of your plants</li>
-            <li>track your shipments</li>
+            <li>check the needs of your plants</li>
         </ul>
-        <a href="/auth/login">LOG IN</a>
-        <br>
-        <a href="/auth/signup">SIGN UP</a>
 
-
-        <h5>Check the weather in your city and take care of your plants accordingly </h5>
+ <h5>Check the weather in your city and take care of your plants accordingly </h5>
         <h3>Search for your city:</h3>
         <form action="/weather" method="GET">
             <label>
@@ -37,12 +33,6 @@
             <br>
             <span>Description: <strong>{{description}}</strong> </span> <span> | </span>
             <span>City: <strong>{{cityName}}</strong></span>
-            
-        </div>
-        {{#if errorMessage}}
-         <p class="error-msg">{{errorMessage}}</p>
-         {{/if}}
-
 
     </div>
 </div>
