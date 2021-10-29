@@ -21,15 +21,17 @@ router.get('/weather', (req, res, next)=>{
       let data = JSON.parse(body)
       // console.log(data);
       if (!address){
-          res.send('please provide your city')
+          res.render('index', {message: 'Please provide the name of the city'});
+          return;
       } else{
+        
           let dataFromAPI = {
-              temperature: data.main.temp, 
-              description: data.weather[0].description,
-              icon: data.weather[0].icon,
+              temperature: data.main?.temp, 
+              description: data.weather?.[0]?.description,
+              icon: data.weather?.[0]?.icon,
               cityName: data.name,
           }
-
+      
           res.render('index', dataFromAPI)
       }
   })

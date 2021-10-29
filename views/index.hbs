@@ -16,23 +16,31 @@
             <li>create a list of your plants</li>
             <li>check the needs of your plants</li>
         </ul>
-
- <h5>Check the weather in your city and take care of your plants accordingly </h5>
+    <div class="check-weather">
+        <h2>Check the weather in your city and take care of your plants accordingly! </h5>
         <h3>Search for your city:</h3>
-        <form action="/weather" method="GET">
+        <form class="check-weather-form" action="/weather" method="GET">
             <label>
                 <input type="text" name="address">
             </label>
             <button type="submit">Search</button>
-
+        
         </form>
-         <div class="temp">
-            <img src="http://openweathermap.org/img/w/{{icon}}.png" alt="Image">
+
+        {{#if cityName}}
+        <div class="temp">
+            <img class="weather-img" src="http://openweathermap.org/img/w/{{icon}}.png" alt="Image">
             <span> <strong>{{temperature}} °C</strong></span>
             <br>
             <br>
-            <span>Description: <strong>{{description}}</strong> </span> <span> | </span>
-            <span>City: <strong>{{cityName}}</strong></span>
-
+            <span><strong>Description: </strong>{{description}} </span> <span> | </span>
+            <span><strong>City:</strong> {{cityName}}</span>
+        </div>
+        {{/if}}
+                    {{#if message}}
+                    <br>
+                    <p class="error-msg-small">{{message}}</p>
+                    {{/if}}
     </div>
+
 </div>
