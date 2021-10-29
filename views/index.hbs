@@ -19,5 +19,30 @@
         <a href="/auth/login">LOG IN</a>
         <br>
         <a href="/auth/signup">SIGN UP</a>
+
+
+        <h5>Check the weather in your city and take care of your plants accordingly </h5>
+        <h3>Search for your city:</h3>
+        <form action="/weather" method="GET">
+            <label>
+                <input type="text" name="address">
+            </label>
+            <button type="submit">Search</button>
+
+        </form>
+         <div class="temp">
+            <img src="http://openweathermap.org/img/w/{{icon}}.png" alt="Image">
+            <span> <strong>{{temperature}} °C</strong></span>
+            <br>
+            <br>
+            <span>Description: <strong>{{description}}</strong> </span> <span> | </span>
+            <span>City: <strong>{{cityName}}</strong></span>
+            
+        </div>
+        {{#if errorMessage}}
+         <p class="error-msg">{{errorMessage}}</p>
+         {{/if}}
+
+
     </div>
 </div>
