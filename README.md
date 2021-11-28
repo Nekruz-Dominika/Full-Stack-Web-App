@@ -1,8 +1,6 @@
 ## plantin' - full-stack web app
 
-<img width="300" alt="" src="./src/images/logo.png">
-
-# This repository is a frontend part of juniors4seniors web app.
+<img width="300" alt="" src="./public/images/plants.png">
 
 # About
 
