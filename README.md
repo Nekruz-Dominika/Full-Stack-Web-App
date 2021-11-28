@@ -1,6 +1,6 @@
-## plantin' - full-stack web app
+# plantin' - full-stack web app
 
-<img width="300" alt="" src="./public/images/plants.png">
+<img width="600" alt="" src="./public/images/plants.png">
 
 # About
 
